@@ -9,7 +9,13 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 
 const Toolbar = () => {
   return (
-    <Navbar bg="dark" expand="lg" variant="dark" fixed="top">
+    <Navbar
+      bg="dark"
+      expand="lg"
+      variant="dark"
+      fixed="top"
+      className="toolbar"
+    >
       <Container fluid>
         <Navbar.Brand href="#" className=" d-flex align-items-center gap-2">
           <HdIcon className="fs-1 text-warning" />
@@ -26,22 +32,22 @@ const Toolbar = () => {
             navbarScroll
           >
             <Nav.Link href="/" className="toolbar_ico">
-              <WhatshotIcon className="fs-2 mb-1" />
+              <WhatshotIcon className="fs-2 mb-1 text-warning" />
               <h6>Trending Now</h6>
             </Nav.Link>
 
             <Nav.Link href="/" className="toolbar_ico">
-              <MovieCreationIcon className="fs-2 mb-1" />
+              <MovieCreationIcon className="fs-2 mb-1 text-warning" />
               <h6>Movies</h6>
             </Nav.Link>
 
             <Nav.Link href="/" className="toolbar_ico">
-              <LiveTvIcon className="fs-2 mb-1" />
+              <LiveTvIcon className="fs-2 mb-2 text-warning" />
               <h6>TV Series</h6>
             </Nav.Link>
 
             <Nav.Link href="/" className="toolbar_ico">
-              <SearchIcon className="fs-2 mb-1" />
+              <SearchIcon className="fs-2 mb-1 text-warning" />
               <h6>Search</h6>
             </Nav.Link>
           </Nav>

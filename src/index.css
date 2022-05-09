@@ -9,12 +9,10 @@
 }
 
 :root {
-  /* --color-bg: #1f1f38;
-  --color-bg-variant: #2c2c6c;
-  --color-primary: #4db5ff;
-  --color-primary-variant: rgba(77, 181, 255, 0.4);
+  --color-bg: #212529;
+  --color-primary: #ffc107;
   --color-white: #fff;
-  --color-light: rgba(255, 255, 255, 0.6); */
+  --color-light: rgba(255, 255, 255, 0.6);
 
   --shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
 
@@ -27,7 +25,6 @@
 
 html {
   scroll-behavior: smooth;
-  height: 100%;
 }
 
 ::-webkit-scrollbar {
@@ -37,9 +34,15 @@ html {
 body {
   font-family: "Cairo", sans-serif;
   line-height: 1.7;
-  height: 100%;
 }
 
 .app {
-  height: 100%;
+  height: 94.8vh;
+}
+
+.footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: var(--color-bg) !important;
 }
