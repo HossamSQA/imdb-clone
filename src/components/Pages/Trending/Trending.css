@@ -1,0 +1,20 @@
+.movie_card {
+  width: 18rem;
+  height: 38rem;
+  position: relative;
+}
+
+.movie_card button {
+  position: absolute;
+  bottom: 0;
+}
+
+.rate {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--color-white);
+  padding: 0.2rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
