@@ -7,6 +7,7 @@
   border-radius: 50px;
   text-shadow: var(--shadow);
   box-shadow: var(--shadow);
+  text-decoration: underline dotted var(--color-bg) 15px;
 }
 
 p {

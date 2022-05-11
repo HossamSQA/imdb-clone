@@ -1,6 +1,6 @@
 .movie_card {
   width: 18rem;
-  height: 38rem;
+  height: 39rem;
   position: relative;
 }
 
@@ -10,11 +10,36 @@
 }
 
 .rate {
+  font-size: 1.25rem;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 1%;
+  right: 2%;
   background: var(--color-white);
-  padding: 0.2rem;
-  border-radius: 5px;
+  /* border-radius: 5px; */
+  font-weight: bold;
+  /* background: rgba(255, 255, 255, 0.5); */
+  box-shadow: var(--shadow);
+}
+
+.page-title {
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-shadow: var(--shadow);
+  border-radius: 50px;
+  text-shadow: var(--shadow);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  background: var(--color-bg);
+}
+
+.info {
+  box-shadow: var(--shadow);
+  border-radius: 1rem;
+  background: transparent;
+  width: 100%;
+  height: fit-content;
+  padding: 1rem;
+  text-align: center;
   font-weight: bold;
 }

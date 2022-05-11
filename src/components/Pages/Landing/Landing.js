@@ -6,7 +6,7 @@ const Landing = () => {
     <div className="container mt-5 text-dark text-center">
       <div>
         <h1 className="fw-bold mb-5 title animate__hinge">
-          <span className="text-warning">IMDB</span> Clone
+          <span className="text-warning">IMDB</span>
         </h1>
         <div className="">
           <p className="fs-4 mt-5">

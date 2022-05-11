@@ -34,6 +34,11 @@ html {
 body {
   font-family: "Cairo", sans-serif;
   line-height: 1.7;
+  background-image: url("../src/assets/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-clip: border-box;
 }
 
 .app {

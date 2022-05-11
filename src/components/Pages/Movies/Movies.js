@@ -1,20 +1,17 @@
-import { Button } from "react-bootstrap";
 import React, { useEffect, useState } from "react";
-import { Card, Row } from "react-bootstrap";
-import { unavailable } from "../config";
-import "./Trending.css";
+import { Button, Card, Row } from "react-bootstrap";
 import Details from "../Details/Details";
+import { unavailable } from "../config";
 import CustomPagination from "../Pagination/CustomPagination";
 
-const Trending = () => {
-  const [allData, setAllData] = useState("");
+const Movies = () => {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [details, setDetails] = useState(false);
+  const [details, setDetails] = useState("");
   const [page, setPage] = useState(1);
 
-  const URL = `https://api.themoviedb.org/3/trending/all/day?api_key=ff467eb5250b9dbc204f57aa97463c7e&page=${page}`;
+  const URL = `https://api.themoviedb.org/3/discover/movie?api_key=ff467eb5250b9dbc204f57aa97463c7e&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_watch_monetization_types=flatrate`;
 
   const dataURL = "https://image.tmdb.org/t/p/w500/";
 
@@ -28,17 +25,14 @@ const Trending = () => {
       })
       .then((data) => {
         setData(data.results);
-        setAllData(data);
         setError("");
       })
       .catch((err) => {
         setError(err.message);
         setData([]);
       })
-      .finally(() => {
-        setLoading(false);
-      });
-  }, [URL, page]);
+      .finally(() => setLoading(false));
+  }, [URL]);
 
   function truncate(str, n) {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
@@ -52,12 +46,11 @@ const Trending = () => {
     <div className="container">
       <div>{details ? <Details /> : null}</div>;
       <h1 className="page-title text-light text-center mb-4 mt-4 animate__rollIn">
-        Trending Now
+        Movies
       </h1>
       <h5 className="mb-3 text-center text-dark info">
         Enjoy with an information for
-        <span className="text-danger"> +{allData.total_results}</span> Movies &
-        TV Series
+        <span className="text-danger"> +12000</span> Movies
       </h5>
       {loading ? <div>Loading...</div> : null}
       {error ? (
@@ -90,11 +83,11 @@ const Trending = () => {
                   </Card.Text>
                   <Card.Text>
                     {movie.vote_average > 5 ? (
-                      <span className="rate text-light bg-success p-1 text-center rounded">
+                      <span className="rate text-light bg-success w-25 text-center">
                         {movie.vote_average}
                       </span>
                     ) : (
-                      <span className="rate text-light bg-danger p-1 text-center rounded">
+                      <span className="rate text-light bg-danger  w-25 text-center">
                         {movie.vote_average}
                       </span>
                     )}
@@ -115,10 +108,10 @@ const Trending = () => {
           ))}
       </div>
       <div className="mt-4">
-        <CustomPagination setPage={setPage} numOfPages={allData.total_pages} />
+        <CustomPagination setPage={setPage} numOfPages={500} />
       </div>
     </div>
   );
 };
 
-export default Trending;
+export default Movies;
