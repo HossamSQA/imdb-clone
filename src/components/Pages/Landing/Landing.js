@@ -8,7 +8,7 @@ const Landing = () => {
         <h1 className="fw-bold mb-5 title animate__hinge">
           <span className="text-warning">IMDB</span>
         </h1>
-        <div className="">
+        <div>
           <p className="fs-4 mt-5">
             <span className="text-warning">IMDb</span> is an online database of
             information related to <span className="text-danger">films</span>,

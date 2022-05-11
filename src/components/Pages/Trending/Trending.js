@@ -51,7 +51,7 @@ const Trending = () => {
   return (
     <div className="container">
       <div>{details ? <Details /> : null}</div>;
-      <h1 className="page-title text-light text-center mb-4 mt-4 animate__rollIn">
+      <h1 className="page-title text-light text-center mb-4 mt-4 animate__rollIn fs-sm-6">
         Trending Now
       </h1>
       <h5 className="mb-3 text-center text-dark info">
