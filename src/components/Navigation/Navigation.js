@@ -1,5 +1,5 @@
 import React from "react";
-import "./Toolbar.css";
+import "./Navigation.css";
 import HdIcon from "@mui/icons-material/Hd";
 import WhatshotIcon from "@mui/icons-material/Whatshot";
 import MovieCreationIcon from "@mui/icons-material/MovieCreation";
@@ -7,7 +7,7 @@ import LiveTvIcon from "@mui/icons-material/LiveTv";
 import SearchIcon from "@mui/icons-material/Search";
 import { Container, Nav, Navbar } from "react-bootstrap";
 
-const Toolbar = () => {
+const Navigation = () => {
   return (
     <Navbar
       bg="dark"
@@ -19,7 +19,7 @@ const Toolbar = () => {
       <Container fluid>
         <Navbar.Brand href="/" className=" d-flex align-items-center gap-2">
           <HdIcon className="fs-1 text-warning" />
-          <h1 className="fw-bold mt-1">IMDB Clone</h1>
+          <h1 className="fw-bold mt-1">IMDB</h1>
         </Navbar.Brand>
 
         <div className="spacer"></div>
@@ -57,4 +57,4 @@ const Toolbar = () => {
   );
 };
 
-export default Toolbar;
+export default Navigation;

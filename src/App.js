@@ -1,18 +1,18 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Toolbar from "./components/ToolBar/Toolbar";
 import { Container } from "react-bootstrap";
-import Landing from "./components/Pages/Landing/Landing";
-import Trending from "./components/Pages/Trending/Trending";
-import Movies from "./components/Pages/Movies/Movies";
-import Series from "./components//Pages/Series/Series";
+import Navigation from "./components/Navigation/Navigation";
+import Landing from "./components/Landing/Landing";
+import Trending from "./components/Pages/Trending";
+import Movies from "./components/Pages/Movies";
+import Series from "./components/Pages/Series";
 // import Search from "./components/Search/Search";
 
 const App = () => {
   return (
     <BrowserRouter>
       <div className="app">
-        <Toolbar />
+        <Navigation />
         <Container className="mt-5 p-5 text-light container">
           <Routes>
             <Route path="/" element={<Landing />} />

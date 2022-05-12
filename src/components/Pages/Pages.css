@@ -1,26 +1,4 @@
-.movie_card {
-  width: 18rem;
-  height: 39rem;
-  position: relative;
-}
-
-.movie_card button {
-  position: absolute;
-  bottom: 0;
-}
-
-.rate {
-  font-size: 1.25rem;
-  position: absolute;
-  top: 1%;
-  right: 2%;
-  background: var(--color-white);
-  /* border-radius: 5px; */
-  font-weight: bold;
-  /* background: rgba(255, 255, 255, 0.5); */
-  box-shadow: var(--shadow);
-}
-
+/* Pages general CSS */
 .page-title {
   font-size: 4rem;
   font-weight: bold;

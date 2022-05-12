@@ -1,0 +1,38 @@
+/* General CSS for Cards and titles */
+.movie_card {
+  width: 18rem;
+  height: 39rem;
+  position: relative;
+  transition: all 0.5s ease;
+  box-shadow: var(--shadow);
+}
+
+.movie_card:hover {
+  transform: scale(1.03);
+  background-color: var(--color-primary) !important;
+}
+
+.movie_card button {
+  position: absolute;
+  bottom: 0;
+  transition: all 0.5s ease;
+  box-shadow: var(--shadow);
+}
+
+.movie_card button:hover {
+  background: var(--color-bg) !important;
+  color: var(--color-white) !important;
+  transform: scale(1.03);
+}
+
+.rate {
+  font-size: 1.25rem;
+  position: absolute;
+  top: 1%;
+  right: 2%;
+  background: var(--color-white);
+  /* border-radius: 5px; */
+  font-weight: bold;
+  /* background: rgba(255, 255, 255, 0.5); */
+  box-shadow: var(--shadow);
+}
