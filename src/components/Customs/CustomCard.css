@@ -1,7 +1,7 @@
 /* General CSS for Cards and titles */
 .movie_card {
   width: 18rem;
-  height: 39rem;
+  height: 40rem;
   position: relative;
   transition: all 0.5s ease;
   box-shadow: var(--shadow);
@@ -14,7 +14,6 @@
 
 .movie_card button {
   position: absolute;
-  bottom: 0;
   transition: all 0.5s ease;
   box-shadow: var(--shadow);
 }

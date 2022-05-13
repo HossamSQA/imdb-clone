@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Row } from "react-bootstrap";
-import { unavailable } from "../unavailable_posters";
+import { unavailable, unavailableLandscape } from "../unavailable_posters";
 import CustomCard from "../Customs/CustomCard";
 import "../Customs/CustomCard.css";
 import CustomPagination from "../Customs/CustomPagination";
@@ -71,6 +71,15 @@ const Trending = () => {
                 movieRelease={movie?.release_date || movie?.first_air_date}
                 movieRate={movie.vote_average}
                 movieDetails={movie.overview}
+                movieVoteCount={movie.vote_count}
+                movieLang={movie.original_language}
+                movieType={movie.media_type}
+                movieShot={
+                  movie.backdrop_path
+                    ? dataURL + movie.backdrop_path
+                    : unavailableLandscape
+                }
+                movieGenre={movie.genre_ids}
               />
             </Row>
           ))}
