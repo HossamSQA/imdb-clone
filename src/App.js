@@ -6,7 +6,7 @@ import Landing from "./components/Landing/Landing";
 import Trending from "./components/Pages/Trending";
 import Movies from "./components/Pages/Movies";
 import Series from "./components/Pages/Series";
-// import Search from "./components/Search/Search";
+import Search from "./components/Pages/Search";
 
 const App = () => {
   return (
@@ -19,7 +19,7 @@ const App = () => {
             <Route path="/Trending" element={<Trending />} />
             <Route path="/Movies" element={<Movies />} />
             <Route path="/Series" element={<Series />} />
-            {/* <Route path="/" component={Search} />  */}
+            <Route path="/Search" element={<Search />} />
           </Routes>
         </Container>
       </div>

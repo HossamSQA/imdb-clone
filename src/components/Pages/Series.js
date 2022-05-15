@@ -5,6 +5,7 @@ import CustomCard from "../Customs/CustomCard";
 import "../Customs/CustomCard.css";
 import CustomPagination from "../Customs/CustomPagination";
 import "./Pages.css";
+import Genres from "../Customs/Genres";
 
 const Series = () => {
   const [allData, setAllData] = useState("");
@@ -12,6 +13,8 @@ const Series = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [page, setPage] = useState(1);
+  const [selectedGenres, setSelectedGenres] = useState([]);
+  const [genres, setGenres] = useState([]);
 
   // Series data URL
   const URL = `https://api.themoviedb.org/3/discover/tv?api_key=ff467eb5250b9dbc204f57aa97463c7e&language=en-US&sort_by=popularity.desc&page=${page}&timezone=America%2FNew_York&include_null_first_air_dates=false&with_watch_monetization_types=flatrate&with_status=0&with_type=0`;
@@ -48,6 +51,15 @@ const Series = () => {
         Enjoy with an information for
         <span className="text-danger"> +{allData.total_results}</span> TV Series
       </h5>
+
+      <Genres
+        selectedGenres={selectedGenres}
+        setSelectedGenres={setSelectedGenres}
+        genres={genres}
+        setGenres={setGenres}
+        setPage={setPage}
+        type={"tv"}
+      />
 
       {loading ? <div className="text-danger">Loading...</div> : null}
       {error ? (

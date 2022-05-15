@@ -5,12 +5,15 @@ import CustomCard from "../Customs/CustomCard";
 import "../Customs/CustomCard.css";
 import CustomPagination from "../Customs/CustomPagination";
 import "./Pages.css";
+import Genres from "../Customs/Genres";
 
 const Movies = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [page, setPage] = useState(1);
+  const [selectedGenres, setSelectedGenres] = useState([]);
+  const [genres, setGenres] = useState([]);
 
   // Movies data URL
   const URL = `https://api.themoviedb.org/3/discover/movie?api_key=ff467eb5250b9dbc204f57aa97463c7e&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_watch_monetization_types=flatrate`;
@@ -45,6 +48,15 @@ const Movies = () => {
         Enjoy with an information for
         <span className="text-danger"> +12000</span> Movies
       </h5>
+
+      <Genres
+        selectedGenres={selectedGenres}
+        setSelectedGenres={setSelectedGenres}
+        genres={genres}
+        setGenres={setGenres}
+        setPage={setPage}
+        type={"movie"}
+      />
 
       {loading ? <div className="text-dark">Loading...</div> : null}
       {error ? (
